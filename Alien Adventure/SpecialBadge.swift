@@ -10,5 +10,19 @@ import SpriteKit
 
 class SpecialBadge: Badge {
     
+    let specialBadge = SKSpriteNode(imageNamed: "BadgeTeal").texture
 
+    override init(requestType: UDRequestType) {
+        super.init(requestType: requestType)
+        self.texture = SKTexture(imageNamed: "BadgeTeal")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    enum BadgeAnimation: Int {
+        case growAndShrink, rotate, shake
+    }
+    
 }
