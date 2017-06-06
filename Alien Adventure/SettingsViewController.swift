@@ -43,6 +43,15 @@ class SettingsViewController: UIViewController {
     
     func addTargets() {
         print("adding targets!")
+        
+        levelSegmentedControl.addTarget(self, action: #selector(switchLevel),
+                        for: .touchUpInside)
+        
+        startGameButton.addTarget(self, action: #selector(startGame),
+                        for: .touchUpInside)
+        
+        showBadgesSwitch.addTarget(self, action: #selector(showBadges),
+                        for: .touchUpInside)
     }
     
     // MARK: Implementing Actions
