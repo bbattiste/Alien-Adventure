@@ -58,13 +58,17 @@ class SettingsViewController: UIViewController {
     
     func switchLevel(segmentControl: UISegmentedControl) {
         print("level control has changed!")
-        Settings.Common.Level
-
+        Settings.Common.Level = segmentControl.selectedSegmentIndex
     }
     
     func showBadges(switchControl: UISwitch) {
         print("show badges switch has changed!")
-        Settings.Common.ShowBadges
+        if Settings.Common.ShowBadges == false {
+            Settings.Common.ShowBadges = true
+        } else {
+            Settings.Common.ShowBadges = false
+        }
+        print(Settings.Common.ShowBadges)
     }
     
     func startGame() {
