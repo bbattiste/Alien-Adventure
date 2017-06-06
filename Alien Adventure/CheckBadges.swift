@@ -10,7 +10,7 @@ extension Hero {
     
     func checkBadges(badges: [Badge], requestTypes: [UDRequestType]) -> Bool {
         var badgeRequestType = [UDRequestType]()
-        
+
         for badge in badges {
             badgeRequestType.append(badge.requestType)
         }
